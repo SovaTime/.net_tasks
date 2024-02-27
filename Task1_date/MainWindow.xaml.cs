@@ -24,5 +24,15 @@ namespace Task1
         {
             InitializeComponent();
         }
+
+        private int[] InputDate_Click(object sender, RoutedEventArgs e)
+        {
+            int dayNow = Convert.ToInt32(Day.Text);
+            int monthNow = Convert.ToInt32(Month.Text);
+            int yearNow = Convert.ToInt32(Year.Text);
+            int weekDay = Convert.ToInt32(WeekDay.Text);
+            int[] nowDate = {dayNow, monthNow, yearNow, weekDay};
+            return nowDate;
+        }
     }
 }
