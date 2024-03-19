@@ -30,8 +30,7 @@ namespace Task1
             int dayNow = Convert.ToInt32(Day.Text);
             int monthNow = Convert.ToInt32(Month.Text);
             int yearNow = Convert.ToInt32(Year.Text);
-            int weekDay = Convert.ToInt32(WeekDay.Text);
-            int[] nowDate = {dayNow, monthNow, yearNow, weekDay};
+            int[] nowDate = {dayNow, monthNow, yearNow};
             return nowDate;
         }
     }
