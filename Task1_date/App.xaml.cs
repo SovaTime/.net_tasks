@@ -6,7 +6,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows;
 
-namespace Task1
+namespace Task1_date
 {
     /// <summary>
     /// Логика взаимодействия для App.xaml

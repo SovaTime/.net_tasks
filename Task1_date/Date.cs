@@ -1,49 +1,18 @@
 ﻿using System;
 
-namespace Task1
+namespace Task1_date
 {
     internal class Date
     {
-        private int dayNow;
-        private int monthNow;
-        private int yearNow;
-
         public int day { get; set; }
         public int month { get; set; }
         public int year { get; set; }
-        public WeekDayEnum weekDay { get; set; }
 
-        public enum WeekDayEnum
-        {
-            Monday,
-            Tuesday,
-            Wednesday,
-            Thursday,
-            Friday,
-            Saturday,
-            Sunday
-        }
-
-        public Date(int day, int month, int year, int weekDay)
+        public Date(int day, int month, int year)
         {
             this.day = day;
             this.month = month;
             this.year = year;
-            this.weekDay = CalculateWeekDay(day, month, year);
-        }
-
-        public Date(int dayNow, int monthNow, int yearNow)
-        {
-            this.dayNow = dayNow;
-            this.monthNow = monthNow;
-            this.yearNow = yearNow;
-        }
-
-        //день недели для конкретной даты
-        private WeekDayEnum CalculateWeekDay(int day, int month, int year)
-        {
-            DateTime date = new DateTime(year, month, day);
-            return (WeekDayEnum)date.DayOfWeek;
         }
 
         //кол-во дней в месяце
@@ -59,7 +28,6 @@ namespace Task1
             day = date.Day;
             month = date.Month;
             year = date.Year;
-            weekDay = (WeekDayEnum)date.DayOfWeek;
         }
 
         //добавление месяцев
@@ -69,7 +37,6 @@ namespace Task1
             day = date.Day;
             month = date.Month;
             year = date.Year;
-            weekDay = (WeekDayEnum)date.DayOfWeek;
         }
 
         //добавление лет
@@ -79,11 +46,10 @@ namespace Task1
             day = date.Day;
             month = date.Month;
             year = date.Year;
-            weekDay = (WeekDayEnum)date.DayOfWeek;
         }
 
         //проверка даты
-        public bool IsValidDate()
+        public bool CheckDate()
         {
             try
             {
