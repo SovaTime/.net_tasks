@@ -1,13 +1,16 @@
 ﻿using System;
 
-namespace DateApp
+namespace Task1
 {
-
-    public class Date
+    internal class Date
     {
-	    public int day { get; set; }
-	    public int month { get; set; }
-	    public int year { get; set; }
+        private int dayNow;
+        private int monthNow;
+        private int yearNow;
+
+        public int day { get; set; }
+        public int month { get; set; }
+        public int year { get; set; }
         public WeekDayEnum weekDay { get; set; }
 
         public enum WeekDayEnum
@@ -22,18 +25,25 @@ namespace DateApp
         }
 
         public Date(int day, int month, int year, int weekDay)
-	    {
-		    this.day = day;
-		    this.month = month;
-		    this.year = year;
+        {
+            this.day = day;
+            this.month = month;
+            this.year = year;
             this.weekDay = CalculateWeekDay(day, month, year);
         }
 
+        public Date(int dayNow, int monthNow, int yearNow)
+        {
+            this.dayNow = dayNow;
+            this.monthNow = monthNow;
+            this.yearNow = yearNow;
+        }
+
         //день недели для конкретной даты
-        private DayOfWeekEnum CalculateWeekDay(int day, int month, int year)
+        private WeekDayEnum CalculateWeekDay(int day, int month, int year)
         {
             DateTime date = new DateTime(year, month, day);
-            return (WeekDayEnum)date.weekDay;
+            return (WeekDayEnum)date.DayOfWeek;
         }
 
         //кол-во дней в месяце
@@ -46,30 +56,30 @@ namespace DateApp
         public void AddDays(int days)
         {
             DateTime date = new DateTime(year, month, day).AddDays(days);
-            day = date.day;
-            month = date.month;
-            year = date.year;
-            weekDay = (WeekDayEnum)date.weekDay;
+            day = date.Day;
+            month = date.Month;
+            year = date.Year;
+            weekDay = (WeekDayEnum)date.DayOfWeek;
         }
 
         //добавление месяцев
         public void AddMonths(int months)
         {
             DateTime date = new DateTime(year, month, day).AddMonths(months);
-            day = date.day;
-            month = date.month;
-            year = date.year;
-            weekDay = (WeekDayEnum)date.weekDay;
+            day = date.Day;
+            month = date.Month;
+            year = date.Year;
+            weekDay = (WeekDayEnum)date.DayOfWeek;
         }
 
         //добавление лет
         public void AddYears(int years)
         {
             DateTime date = new DateTime(year, month, day).AddYears(years);
-            day = date.day;
-            month = date.month;
-            year = date.year;
-            weekDay = (WeekDayEnum)date.weekDay;
+            day = date.Day;
+            month = date.Month;
+            year = date.Year;
+            weekDay = (WeekDayEnum)date.DayOfWeek;
         }
 
         //проверка даты

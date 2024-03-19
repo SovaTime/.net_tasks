@@ -8,11 +8,11 @@
         Title="MainWindow" Height="550" Width="900">
     <Grid>
         <Calendar HorizontalAlignment="Left" Margin="711,10,0,0" VerticalAlignment="Top"/>
-        <Button x:Name="InputDate" Content="Записать дату" HorizontalAlignment="Left" Margin="380,60,0,0" VerticalAlignment="Top" Height="42" Width="230" FontSize="16" Click="InputDate_Click"/>
         <TextBlock HorizontalAlignment="Left" Margin="42,22,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="18" Width="294"><Run Text="Введите дату"/><Run Text=" в "/><Run Text="формате дд мм гггг:"/></TextBlock>
-        <TextBox x:Name="Day" HorizontalAlignment="Left" Margin="103,88,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="64" Height="43"/>
-        <TextBox x:Name="Month" HorizontalAlignment="Left" Margin="172,88,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="70" Height="43" FontSize="16"/>
-        <TextBox x:Name="Year" HorizontalAlignment="Left" Margin="247,88,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="67" Height="43" FontSize="16"/>
+        <TextBox x:Name="Day" HorizontalAlignment="Left" Margin="89,51,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="64" Height="43"/>
+        <TextBox x:Name="Month" HorizontalAlignment="Left" Margin="158,51,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="70" Height="43" FontSize="16"/>
+        <TextBox x:Name="Year" HorizontalAlignment="Left" Margin="233,51,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="67" Height="43" FontSize="16"/>
+        <Button x:Name="DayInMonth" Content="Вывести количество дней в текущем месяце" HorizontalAlignment="Left" Margin="355,49,0,0" VerticalAlignment="Top" Height="47" Width="318" Click="DayInMonth_Click" FontSize="14"/>
 
     </Grid>
 </Window>

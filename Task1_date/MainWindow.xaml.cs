@@ -23,15 +23,16 @@ namespace Task1
         public MainWindow()
         {
             InitializeComponent();
-        }
-
-        private int[] InputDate_Click(object sender, RoutedEventArgs e)
-        {
             int dayNow = Convert.ToInt32(Day.Text);
             int monthNow = Convert.ToInt32(Month.Text);
             int yearNow = Convert.ToInt32(Year.Text);
-            int[] nowDate = {dayNow, monthNow, yearNow};
-            return nowDate;
+
+            Date nowDay = new Date(dayNow, monthNow, yearNow);
+        }
+
+        private void DayInMonth_Click(object sender, RoutedEventArgs e)
+        {
+
         }
     }
 }
