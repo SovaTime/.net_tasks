@@ -1,0 +1,26 @@
+﻿<Window x:Class="Task2_animal.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Task2_animal"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="550" Width="900">
+    <Grid>
+        <TextBlock HorizontalAlignment="Left" Margin="141,41,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="37" Width="94" FontSize="20"><Run Language="ru-ru" Text="Черепаха"/><LineBreak/><Run Language="ru-ru"/></TextBlock>
+        <TextBlock HorizontalAlignment="Center" Margin="0,41,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="37" Width="72" FontSize="20"><Run Language="ru-ru" Text="Собака"/></TextBlock>
+        <TextBlock HorizontalAlignment="Left" Margin="675,41,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="37" Width="83" FontSize="20"><Run Language="ru-ru" Text="Пантера"/><LineBreak/><Run Language="ru-ru"/></TextBlock>
+        <TextBox x:Name="OutputBox" HorizontalAlignment="Center" Height="89" Margin="0,399,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="808" FontSize="20" TextChanged="OutputBox_TextChanged"/>
+        <TextBlock HorizontalAlignment="Center" Margin="0,94,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="408" Height="35" FontSize="20"><Run Text="Начальная скорость каждого животного "/><Run Language="ru-ru" Text="- "/><Run Text="3"/></TextBlock>
+        <Button x:Name="MoveTurtle" Content="Двигаться" HorizontalAlignment="Left" Margin="118,158,0,0" VerticalAlignment="Top" Height="45" Width="140" FontSize="20" Click="MoveTurtle_Click"/>
+        <Button x:Name="StandTurtle" Content="Стоять" HorizontalAlignment="Left" Margin="118,222,0,0" VerticalAlignment="Top" Height="45" Width="140" FontSize="20" Click="StandTurtle_Click"/>
+        <Button x:Name="MoveDog" Content="Двигаться" HorizontalAlignment="Center" Margin="0,158,0,0" VerticalAlignment="Top" Height="45" Width="140" FontSize="20" Click="MoveDog_Click"/>
+        <Button x:Name="StandDog" Content="Стоять" HorizontalAlignment="Center" Margin="0,222,0,0" VerticalAlignment="Top" Height="45" Width="140" FontSize="20" Click="StandDog_Click"/>
+        <Button x:Name="VoiceDog" Content="Голос" HorizontalAlignment="Center" Margin="0,286,0,0" VerticalAlignment="Top" Height="45" Width="140" FontSize="20" Click="VoiceDog_Click"/>
+        <Button x:Name="MovePanther" Content="Двигаться" HorizontalAlignment="Left" Margin="646,158,0,0" VerticalAlignment="Top" Height="45" Width="140" FontSize="20" Click="MovePanther_Click"/>
+        <Button x:Name="StandPanther" Content="Стоять" HorizontalAlignment="Left" Margin="646,222,0,0" VerticalAlignment="Top" Height="45" Width="140" FontSize="20" Click="StandPanther_Click"/>
+        <Button x:Name="VoicePanther" Content="Голос" HorizontalAlignment="Left" Margin="646,286,0,0" VerticalAlignment="Top" Height="45" Width="140" FontSize="20" Click="VoicePanther_Click"/>
+        <Button x:Name="ClimbePanther" Content="Залезть на дерево" HorizontalAlignment="Left" Margin="626,349,0,0" VerticalAlignment="Top" Height="45" Width="180" FontSize="20" Click="ClimbePanther_Click"/>
+
+    </Grid>
+</Window>
